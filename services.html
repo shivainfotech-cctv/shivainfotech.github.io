@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Detailed Services | Shiva Infotech</title>
+    <style>
+        /* General Styles - index.html se match karti hui */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        h1, h2, h3 { margin: 0; }
+        a { text-decoration: none; color: #fff; }
+        
+        /* Header & Navigation */
+        header {
+            background-color: #0b2545;
+            color: white;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 { font-size: 24px; letter-spacing: 1px; }
+        nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { font-weight: 500; transition: color 0.3s; }
+        nav ul li a:hover { color: #8da9c4; }
+
+        /* Hero section for Services */
+        .services-hero {
+            background: linear-gradient(rgba(11, 37, 69, 0.9), rgba(11, 37, 69, 0.9));
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .services-hero h2 { font-size: 36px; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* Detailed Services Layout */
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        .service-card {
+            background: white;
+            margin-bottom: 30px;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-left: 6px solid #133c55;
+            transition: transform 0.3s;
+        }
+        .service-card:hover {
+            transform: scale(1.01);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .service-card h3 {
+            color: #0b2545;
+            font-size: 24px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .service-card .main-desc {
+            font-weight: bold;
+            color: #133c55;
+            margin-bottom: 15px;
+            display: block;
+            font-size: 17px;
+        }
+        .service-card ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 10px;
+        }
+        .service-card ul li {
+            position: relative;
+            padding-left: 25px;
+            color: #555;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        .service-card ul li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: #25d366;
+            font-weight: bold;
+        }
+
+        /* Portfolio Image Styling */
+        .portfolio-section {
+            background-color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        .portfolio-section h2 {
+            color: #0b2545;
+            margin-bottom: 30px;
+            font-size: 28px;
+            text-transform: uppercase;
+        }
+        .portfolio-img {
+            width: 100%;
+            max-width: 950px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0b2545;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        @media (max-width: 768px) {
+            header { padding: 15px; flex-direction: column; }
+            nav ul { margin-top: 15px; }
+            .service-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SHIVA INFOTECH</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="services-hero">
+        <h2>Our Comprehensive Services</h2>
+    </div>
+
+    <div class="container">
+        
+        <div class="service-card">
+            <h3>1) CCTV Surveillance</h3>
+            <span class="main-desc">CCTV HD and IP Installation, Old Setup Maintenance, Annual Maintenance (AMC).</span>
+            <ul>
+                <li>High Definition (HD) & IP Based Camera Installation</li>
+                <li>Night Vision & Motion Detection Features</li>
+                <li>Remote Mobile Viewing Setup (Live Feed Monitoring)</li>
+                <li>Quick Technical Support & Maintenance for Schools & Offices</li>
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <h3>2) Biometrics & Digital Locks</h3>
+            <span class="main-desc">Attendance Machines for Corporate Offices, Face Detection & High-Security Locks.</span>
+            <ul>
+                <li>Staff Attendance Management with Face & Fingerprint Detection</li>
+                <li>High-Security Digital Locks for Home & Safe Rooms</li>
+                <li>Owner Cabin & Documentation Room Access Control</li>
+                <li>RFID Card Systems for Secure Entry</li>
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <h3>3) Fire Safety Solutions</h3>
+            <span class="main-desc">Fire Panels, Heat Sensors, Smoke Detectors, and Automated Alarm Systems.</span>
+            <ul>
+                <li>Intelligent Fire Alarm Control Panel Installation</li>
+                <li>Advanced Smoke & Heat Sensors for Early Warning</li>
+                <li>Emergency Fire Alarm Sounders (Hooters)</li>
+                <li>Regular System Health Checkups & AMC</li>
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <h3>4) PA Systems (Public Announcement)</h3>
+            <span class="main-desc">Sound Systems for Schools, Corporate Offices, Cafes, and Outdoor Areas.</span>
+            <ul>
+                <li>Clear Voice Paging & Announcement Systems for Schools</li>
+                <li>High-Quality Background Music Setup for Cafes & Restaurants</li>
+                <li>Professional Microphones & Amplifier Integration</li>
+                <li>Outdoor Backyard Weather-proof Speaker Setup</li>
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <h3>5) Servers & Data Infrastructure</h3>
+            <span class="main-desc">Secure Server Setup for Diamond Companies & Corporate IT Data Security.</span>
+            <ul>
+                <li>Centralized Server Linking for Multi-Computer Offices</li>
+                <li>Specialized Data Security for Diamond Business Records</li>
+                <li>Premium Paid Antivirus Installation & Configuration</li>
+                <li>Automatic Data Backup Solutions to Prevent Loss</li>
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <h3>6) Boom Barrier & Intercom</h3>
+            <span class="main-desc">Automatic Gate Barriers & Multi-line Intercom Systems for Societies.</span>
+            <ul>
+                <li>Automatic Boom Barrier Installation for Society Main Gates</li>
+                <li>Office Gate Vehicle Access Control Systems</li>
+                <li>Multi-line Intercom Phone Setup for Societies & Apartments</li>
+                <li>Clear Audio Communication from Security Gate to Flat</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="portfolio-section">
+        <h2>Our Portfolio of Services</h2>
+        <img src= "all service collage.png" alt="Shiva Infotech Portfolio" class="portfolio-img">
+    </div>
+
+    <footer>
+        <p>Contact: +91 75758 16363 | Email: shivainfotech88@gmail.com</p>
+        <p>&copy; 2026 Shiva Infotech. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
