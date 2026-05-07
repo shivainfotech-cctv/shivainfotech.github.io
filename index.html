@@ -1,235 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shiva Infotech | Complete Security & IT Solutions</title>
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            color: #333;
-            scroll-behavior: smooth;
-        }
-        h1, h2, h3 {
-            margin: 0;
-        }
-        a {
-            text-decoration: none;
-            color: #fff;
-        }
-        
-        /* Header & Navigation */
-        header {
-            background-color: #0b2545;
-            color: white;
-            padding: 15px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        header h1 {
-            font-size: 24px;
-            letter-spacing: 1px;
-        }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-        nav ul li {
-            margin-left: 20px;
-        }
-        nav ul li a {
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        nav ul li a:hover {
-            color: #8da9c4;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(11, 37, 69, 0.8), rgba(11, 37, 69, 0.8)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1920&q=80') center/cover;
-            color: white;
-            text-align: center;
-            padding: 120px 20px;
-        }
-        .hero h2 {
-            font-size: 40px;
-            margin-bottom: 20px;
-        }
-        .hero p {
-            font-size: 18px;
-            max-width: 800px;
-            margin: 0 auto 30px auto;
-            line-height: 1.6;
-        }
-        .btn {
-            background-color: #133c55;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 5px;
-            font-size: 16px;
-            border: 2px solid white;
-            transition: all 0.3s;
-            display: inline-block;
-        }
-        .btn:hover {
-            background-color: white;
-            color: #0b2545;
-        }
+<title>Shiva Infotech | CCTV & IT Solutions</title>
 
-        /* Services Section */
-        .services-section {
-            padding: 80px 20px;
-            text-align: center;
-        }
-        .services-section h2 {
-            font-size: 32px;
-            margin-bottom: 40px;
-            color: #0b2545;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-            text-align: left;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        .card h3 {
-            color: #133c55;
-            margin-bottom: 15px;
-            font-size: 20px;
-            border-bottom: 2px solid #8da9c4;
-            padding-bottom: 10px;
-        }
-        .card p {
-            font-size: 15px;
-            line-height: 1.5;
-            color: #555;
-        }
-        .more-services-btn {
-            margin-top: 40px;
-            display: inline-block;
-            color: #133c55;
-            border: 2px solid #133c55;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        .more-services-btn:hover {
-            background: #133c55;
-            color: white;
-        }
+<style>
 
-        /* Footer / Contact */
-        footer {
-            background-color: #0b2545;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
-        footer h3 {
-            margin-bottom: 20px;
-            font-size: 24px;
-        }
-        .contact-info {
-            font-size: 16px;
-            margin-bottom: 20px;
-            line-height: 1.8;
-        }
-        .copyright {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #8da9c4;
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                padding: 15px;
-            }
-            nav ul {
-                margin-top: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            nav ul li {
-                margin: 5px 10px;
-            }
-        }
-    </style>
+body{
+font-family:Arial, sans-serif;
+background:#f4f7fb;
+color:#222;
+}
+
+/* HEADER */
+
+header{
+background:rgba(11,37,69,0.95);
+backdrop-filter:blur(10px);
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,0.2);
+}
+
+header h1{
+color:white;
+font-size:28px;
+letter-spacing:1px;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:25px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-size:16px;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#00c6ff;
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+background:
+linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.7)),
+url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1920&q=80');
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+color:white;
+}
+
+.hero-content{
+max-width:850px;
+animation:fadeIn 1.2s ease;
+}
+
+.hero h2{
+font-size:55px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+line-height:1.7;
+margin-bottom:35px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 35px;
+background:linear-gradient(45deg,#00c6ff,#0072ff);
+border-radius:40px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+transition:0.4s;
+box-shadow:0 5px 20px rgba(0,114,255,0.4);
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+/* SERVICES */
+
+.services{
+padding:90px 20px;
+background:white;
+text-align:center;
+}
+
+.services h2{
+font-size:40px;
+margin-bottom:50px;
+color:#0b2545;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+max-width:1200px;
+margin:auto;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#0072ff;
+font-size:24px;
+}
+
+.card p{
+font-size:16px;
+line-height:1.7;
+color:#555;
+}
+
+/* CONTACT */
+
+.contact{
+background:#0b2545;
+color:white;
+padding:70px 20px;
+text-align:center;
+}
+
+.contact h2{
+font-size:36px;
+margin-bottom:20px;
+}
+
+.contact p{
+font-size:18px;
+margin:10px 0;
+}
+
+/* WHATSAPP BUTTON */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50%;
+font-size:28px;
+text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+z-index:999;
+}
+
+/* FOOTER */
+
+footer{
+background:#081b33;
+color:#aaa;
+text-align:center;
+padding:18px;
+font-size:14px;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+padding:15px;
+}
+
+nav ul{
+margin-top:10px;
+}
+
+.hero h2{
+font-size:38px;
+}
+
+.hero p{
+font-size:17px;
+}
+
+.services h2{
+font-size:32px;
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
-    <header>
-        <h1>SHIVA INFOTECH</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
 
-    <section id="home" class="hero">
-        <h2>Securing & Connecting Your World</h2>
-        <p>Shiva Infotech provides top-tier technical installations, reliable maintenance, and complete IT infrastructure solutions.</p>
-        <a href="#contact" class="btn">Get in Touch</a>
-    </section>
+<h1>SHIVA INFOTECH</h1>
 
-    <section id="services" class="services-section">
-        <h2>Our Services</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>CCTV Systems</h3>
-                <p>Complete installation of HD and IP CCTV cameras. Genuine products and quick technical service.</p>
-            </div>
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
 
-            <div class="card">
-                <h3>Biometrics & Digital Locks</h3>
-                <p>Advanced attendance machines for corporate staff and high-security digital locks for homes.</p>
-            </div>
+</header>
 
-            <div class="card">
-                <h3>Server & IT Infrastructure</h3>
-                <p>Secure data linking and server setups for corporate offices and diamond companies.</p>
-            </div>
-        </div>
-        
-        <a href="services.html" class="more-services-btn">View All Detailed Services</a>
-    </section>
+<!-- HERO -->
 
-    <footer id="contact">
-        <h3>Contact Shiva Infotech</h3>
-        <div class="contact-info">
-            <p><strong>Phone:</strong> +91 91048 87110 +91 75758 16363</p>
-            <p><strong>Email:</strong> shivainfotech88@gmail.com</p>
-        </div>
-        <p class="copyright">&copy; 2026 Shiva Infotech. All Rights Reserved.</p>
-    </footer>
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h2>Complete Security & IT Solutions</h2>
+
+<p>
+Professional CCTV Installation, Networking,
+Biometric Attendance Systems, Server Setup &
+Advanced IT Infrastructure Solutions.
+</p>
+
+<a href="#contact" class="btn">Contact Now</a>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+<h2>Our Premium Services</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>📷 CCTV Installation</h3>
+<p>
+HD & IP Camera installation with remote mobile monitoring,
+DVR/NVR setup and maintenance.
+</p>
+</div>
+
+<div class="card">
+<h3>🌐 Networking Solutions</h3>
+<p>
+Office networking, WiFi setup, LAN wiring,
+switch & router configuration.
+</p>
+</div>
+
+<div class="card">
+<h3>🖐 Biometric Attendance</h3>
+<p>
+Fingerprint attendance systems with employee reports
+and cloud integration support.
+</p>
+</div>
+
+<div class="card">
+<h3>🔐 Digital Door Locks</h3>
+<p>
+Smart digital locks for home, office & commercial
+security with app support.
+</p>
+</div>
+
+<div class="card">
+<h3>🖥 Server Setup</h3>
+<p>
+Secure server installation and IT infrastructure
+management for businesses.
+</p>
+</div>
+
+<div class="card">
+<h3>⚡ Technical Support</h3>
+<p>
+Fast maintenance and technical troubleshooting
+services available.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<h2>Contact Shiva Infotech</h2>
+
+<p>📞 +91 91048 87110</p>
+<p>📞 +91 75758 16363</p>
+
+<p>📧 shivainfotech88@gmail.com</p>
+
+<p>📍 Gujarat, India</p>
+
+</section>
+
+<!-- WHATSAPP -->
+
+<a class="whatsapp"
+href="https://wa.me/919104887110"
+target="_blank">
+💬
+</a>
+
+<footer>
+
+© 2026 Shiva Infotech | All Rights Reserved
+
+</footer>
 
 </body>
-</html>
+    </html>
