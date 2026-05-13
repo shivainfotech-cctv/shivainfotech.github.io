@@ -1,1 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Shiva Infotech | CCTV & IT Solutions</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#06111f;
+color:white;
+overflow-x:hidden;
+}
+
+/* Background Glow */
+
+body::before{
+content:'';
+position:fixed;
+width:600px;
+height:600px;
+background:radial-gradient(circle,#00c6ff33,transparent 70%);
+top:-200px;
+left:-150px;
+z-index:-1;
+animation:moveGlow 8s linear infinite alternate;
+}
+
+body::after{
+content:'';
+position:fixed;
+width:500px;
+height:500px;
+background:radial-gradient(circle,#0072ff22,transparent 70%);
+bottom:-150px;
+right:-100px;
+z-index:-1;
+animation:moveGlow2 10s linear infinite alternate;
+}
+
+@keyframes moveGlow{
+0%{
+transform:translate(0,0);
+}
+100%{
+transform:translate(100px,80px);
+}
+}
+
+@keyframes moveGlow2{
+0%{
+transform:translate(0,0);
+}
+100%{
+transform:translate(-80px,-60px);
+}
+}
+
+/* HEADER */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(5,15,30,0.7);
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(255,255,255,0.08);
+z-index:1000;
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+background:linear-gradient(45deg,#00c6ff,#0072ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:35px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-size:16px;
+font-weight:500;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#00c6ff;
+}
+
+/* HERO SECTION */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:120px 20px 60px;
+
+background:
+linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.8)),
+url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1920&q=80');
+
+background-size:cover;
+background-position:center;
+position:relative;
+}
+
+.hero-content{
+max-width:900px;
+animation:fadeUp 1.2s ease;
+}
+
+.hero h1{
+font-size:68px;
+line-height:1.1;
+margin-bottom:25px;
+}
+
+.hero h1 span{
+background:linear-gradient(45deg,#00c6ff,#4facfe,#0072ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+font-size:20px;
+line-height:1.8;
+color:#d6dfea;
+margin-bottom:40px;
+}
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:15px 35px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+transition:0.4s;
+display:inline-block;
+}
+
+.btn-primary{
+background:linear-gradient(45deg,#00c6ff,#0072ff);
+color:white;
+box-shadow:0 10px 30px rgba(0,114,255,0.4);
+}
+
+.btn-secondary{
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
+color:white;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+}
+
+/* Floating Cards */
+
+.floating-card{
+position:absolute;
+padding:18px 25px;
+border-radius:20px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(14px);
+border:1px solid rgba(255,255,255,0.08);
+box-shadow:0 15px 40px rgba(0,0,0,0.3);
+animation:float 4s ease-in-out infinite;
+}
+
+.card1{
+top:25%;
+left:6%;
+}
+
+.card2{
+bottom:22%;
+right:7%;
+animation-delay:2s;
+}
+
+@keyframes float{
+0%,100%{
+transform:translateY(0px);
+}
+50%{
+transform:translateY(-15px);
+}
+}
+
+/* SERVICES */
+
+.services{
+padding:100px 20px;
+text-align:center;
+}
+
+.section-title{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.section-title span{
+color:#00c6ff;
+}
+
+.section-subtitle{
+max-width:700px;
+margin:auto;
+line-height:1.8;
+color:#b8c4d6;
+margin-bottom:60px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:35px;
+max-width:1250px;
+margin:auto;
+}
+
+.service-card{
+background:rgba(255,255,255,0.06);
+backdrop-filter:blur(18px);
+padding:40px 30px;
+border-radius:25px;
+border:1px solid rgba(255,255,255,0.08);
+transition:0.5s;
+transform-style:preserve-3d;
+position:relative;
+overflow:hidden;
+box-shadow:0 15px 40px rgba(0,0,0,0.25);
+}
+
+.service-card::before{
+content:'';
+position:absolute;
+width:180px;
+height:180px;
+background:linear-gradient(45deg,#00c6ff22,transparent);
+border-radius:50%;
+top:-60px;
+right:-60px;
+}
+
+.service-card:hover{
+transform:translateY(-12px) rotateX(5deg) rotateY(-5deg);
+box-shadow:0 25px 50px rgba(0,0,0,0.4);
+}
+
+.icon{
+font-size:55px;
+margin-bottom:20px;
+}
+
+.service-card h3{
+font-size:24px;
+margin-bottom:15px;
+}
+
+.service-card p{
+line-height:1.8;
+color:#d6dfea;
+font-size:15px;
+}
+
+/* STATS */
+
+.stats{
+padding:90px 20px;
+background:linear-gradient(135deg,#07172a,#0d2745);
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+max-width:1100px;
+margin:auto;
+}
+
+.stat-box{
+background:rgba(255,255,255,0.07);
+padding:35px;
+border-radius:22px;
+backdrop-filter:blur(10px);
+transition:0.4s;
+}
+
+.stat-box:hover{
+transform:translateY(-10px);
+}
+
+.stat-box h2{
+font-size:42px;
+color:#00c6ff;
+margin-bottom:10px;
+}
+
+/* CONTACT */
+
+.contact{
+padding:100px 20px;
+text-align:center;
+}
+
+.contact-box{
+max-width:850px;
+margin:auto;
+background:rgba(255,255,255,0.06);
+backdrop-filter:blur(18px);
+padding:60px 30px;
+border-radius:30px;
+border:1px solid rgba(255,255,255,0.08);
+box-shadow:0 20px 40px rgba(0,0,0,0.3);
+}
+
+.contact h2{
+font-size:42px;
+margin-bottom:25px;
+}
+
+.contact p{
+font-size:18px;
+margin:15px 0;
+color:#d6dfea;
+}
+
+/* WhatsApp */
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+width:65px;
+height:65px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#25D366;
+color:white;
+font-size:30px;
+border-radius:50%;
+text-decoration:none;
+box-shadow:0 10px 25px rgba(0,0,0,0.35);
+z-index:999;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{
+box-shadow:0 0 0 0 rgba(37,211,102,0.7);
+}
+70%{
+box-shadow:0 0 0 20px rgba(37,211,102,0);
+}
+100%{
+box-shadow:0 0 0 0 rgba(37,211,102,0);
+}
+}
+
+/* FOOTER */
+
+footer{
+background:#040d18;
+padding:25px;
+text-align:center;
+color:#8fa4bb;
+border-top:1px solid rgba(255,255,255,0.08);
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+header{
+padding:15px 20px;
+flex-direction:column;
+gap:15px;
+}
+
+nav ul{
+gap:18px;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:17px;
+}
+
+.section-title{
+font-size:34px;
+}
+
+.floating-card{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">SHIVA INFOTECH</div>
+
+<nav>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="floating-card card1">
+📹 Smart CCTV Security
+</div>
+
+<div class="floating-card card2">
+🌐 Advanced Networking
+</div>
+
+<div class="hero-content">
+
+<h1>
+Future Ready <span>Security & IT</span> Solutions
+</h1>
+
+<p>
+Professional CCTV Installation, Networking,
+Biometric Attendance Systems, Server Setup &
+Advanced IT Infrastructure Solutions.
+</p>
+
+<div class="hero-buttons">
+<a href="#contact" class="btn btn-primary">Contact Now</a>
+
+<a href="services.html" class="btn btn-secondary">
+Explore Services
+</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+<h2 class="section-title">
+Our <span>Premium Services</span>
+</h2>
+
+<p class="section-subtitle">
+We provide modern security and IT infrastructure solutions
+for homes, offices and commercial businesses.
+</p>
+
+<div class="grid">
+
+<div class="service-card">
+<div class="icon">📷</div>
+<h3>CCTV Installation</h3>
+<p>
+HD & IP Camera installation with remote monitoring,
+DVR/NVR setup and maintenance support.
+</p>
+</div>
+
+<div class="service-card">
+<div class="icon">🌐</div>
+<h3>Networking Solutions</h3>
+<p>
+Office networking, WiFi setup, LAN wiring,
+switch & router configuration.
+</p>
+</div>
+
+<div class="service-card">
+<div class="icon">🖐</div>
+<h3>Biometric Attendance</h3>
+<p>
+Fingerprint attendance systems with employee reports
+and cloud integration support.
+</p>
+</div>
+
+<div class="service-card">
+<div class="icon">🔐</div>
+<h3>Digital Door Locks</h3>
+<p>
+Smart digital locks for home, office & commercial security.
+</p>
+</div>
+
+<div class="service-card">
+<div class="icon">🖥</div>
+<h3>Server Setup</h3>
+<p>
+Secure server installation and IT infrastructure
+management for businesses.
+</p>
+</div>
+
+<div class="service-card">
+<div class="icon">⚡</div>
+<h3>Technical Support</h3>
+<p>
+Fast maintenance and technical troubleshooting services.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="stats">
+
+<div class="stats-grid">
+
+<div class="stat-box">
+<h2>500+</h2>
+<p>Projects Completed</p>
+</div>
+
+<div class="stat-box">
+<h2>24/7</h2>
+<p>Technical Support</p>
+</div>
+
+<div class="stat-box">
+<h2>100%</h2>
+<p>Client Satisfaction</p>
+</div>
+
+<div class="stat-box">
+<h2>10+</h2>
+<p>Years Experience</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="contact-box">
+
+<h2>Contact Shiva Infotech</h2>
+
+<p>📞 Yash Modi : +91 91048 87110</p>
+
+<p>📞 Mahil Desai : +91 75758 16363</p>
+
+<p>📧 shivainfotech88@gmail.com</p>
+
+<p>📍 Surat, Gujarat, India</p>
+
+<a href="https://wa.me/919104887110"
+class="btn btn-primary"
+target="_blank">
+Chat on WhatsApp
+</a>
+
+</div>
+
+</section>
+
+<!-- WHATSAPP -->
+
+<a class="whatsapp"
+href="https://wa.me/919104887110"
+target="_blank">
+💬
+</a>
+
+<footer>
+
+© 2026 Shiva Infotech | All Rights Reserved
+
+</footer>
+
+<script>
+
+const cards = document.querySelectorAll('.service-card');
+
+cards.forEach(card => {
+
+card.addEventListener('mousemove',(e)=>{
+
+const rect = card.getBoundingClientRect();
+
+const x = e.clientX - rect.left;
+const y = e.clientY - rect.top;
+
+const rotateY = ((x / rect.width) - 0.5) * 12;
+const rotateX = ((y / rect.height) - 0.5) * -12;
+
+card.style.transform =
+`rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+
+});
+
+card.addEventListener('mouseleave',()=>{
+
+card.style.transform =
+'rotateX(0deg) rotateY(0deg)';
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
