@@ -89,8 +89,22 @@ z-index:1000;
 }
 
 .logo{
-font-size:30px;
+display:flex;
+align-items:center;
+gap:12px;
+font-size:28px;
 font-weight:700;
+color:white;
+}
+
+.logo img{
+width:48px;
+height:48px;
+object-fit:contain;
+border-radius:50%;
+}
+
+.logo span{
 background:linear-gradient(45deg,#00c6ff,#0072ff);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
@@ -457,7 +471,10 @@ display:none;
 
 <header>
 
-<div class="logo">SHIVA INFOTECH</div>
+<div class="logo">
+<img src="Shiva Logo.png" alt="Shiva Infotech Logo">
+<span>SHIVA INFOTECH</span>
+</div>
 
 <nav>
 <ul>
