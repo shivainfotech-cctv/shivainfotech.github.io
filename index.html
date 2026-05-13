@@ -28,6 +28,7 @@ overflow-x:hidden;
 }
 
 /* FIX SCROLL */
+
 section{
 scroll-margin-top:100px;
 }
@@ -341,11 +342,63 @@ color:#d6dfea;
 /* WHY CHOOSE US */
 
 .why-us{
-padding:100px 20px;
+padding:120px 20px;
+position:relative;
+overflow:hidden;
+}
+
+.why-us::before{
+content:'';
+position:absolute;
+width:500px;
+height:500px;
+background:radial-gradient(circle,#00c6ff18,transparent 70%);
+top:-180px;
+left:-180px;
+z-index:-1;
+}
+
+.why-heading{
+text-align:center;
+max-width:900px;
+margin:auto auto 70px;
+}
+
+.mini-tag{
+display:inline-block;
+padding:10px 22px;
+border-radius:50px;
+background:rgba(0,198,255,0.12);
+border:1px solid rgba(0,198,255,0.25);
+color:#00c6ff;
+font-size:14px;
+font-weight:600;
+letter-spacing:1px;
+margin-bottom:22px;
+}
+
+.why-us .section-title{
+font-size:56px;
+margin-bottom:22px;
+line-height:1.2;
+}
+
+.why-us .section-title span{
+background:linear-gradient(45deg,#00c6ff,#4facfe,#0072ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.why-us .section-subtitle{
+max-width:760px;
+margin:auto;
+font-size:18px;
+line-height:2;
+color:#c6d3e1;
 }
 
 .why-container{
-max-width:1200px;
+max-width:1250px;
 margin:auto;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -354,26 +407,55 @@ gap:30px;
 
 .why-box{
 background:rgba(255,255,255,0.05);
-padding:35px;
-border-radius:24px;
+padding:40px 30px;
+border-radius:28px;
 border:1px solid rgba(255,255,255,0.08);
-transition:0.4s;
-text-align:center;
+transition:0.45s;
+text-align:left;
+position:relative;
+overflow:hidden;
+backdrop-filter:blur(18px);
+box-shadow:0 15px 40px rgba(0,0,0,0.25);
+}
+
+.why-box::before{
+content:'';
+position:absolute;
+width:180px;
+height:180px;
+background:linear-gradient(45deg,#00c6ff15,transparent);
+border-radius:50%;
+top:-70px;
+right:-70px;
 }
 
 .why-box:hover{
-transform:translateY(-10px);
+transform:translateY(-12px);
 border-color:#00c6ff55;
+box-shadow:0 25px 55px rgba(0,0,0,0.4);
+}
+
+.why-icon{
+width:70px;
+height:70px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+border-radius:18px;
+background:linear-gradient(45deg,#00c6ff,#0072ff);
+margin-bottom:22px;
+box-shadow:0 10px 30px rgba(0,114,255,0.35);
 }
 
 .why-box h3{
-margin:18px 0 12px;
 font-size:24px;
+margin-bottom:15px;
 }
 
 .why-box p{
 color:#d6dfea;
-line-height:1.8;
+line-height:1.9;
 font-size:15px;
 }
 
@@ -546,6 +628,19 @@ font-size:34px;
 font-size:15px;
 }
 
+.why-us .section-title{
+font-size:38px;
+}
+
+.why-box{
+padding:30px 24px;
+text-align:center;
+}
+
+.why-icon{
+margin:auto auto 20px;
+}
+
 .contact-box{
 padding:45px 20px;
 }
@@ -711,159 +806,65 @@ and enterprise IT infrastructure management.
 
 <section class="why-us">
 
+<div class="why-heading">
+
+<span class="mini-tag">
+WHY CHOOSE US
+</span>
+
 <h2 class="section-title">
 Why Choose <span>Shiva Infotech</span>
 </h2>
 
 <p class="section-subtitle">
-Delivering reliable security and IT solutions with professional support,
-advanced technology and customer-focused service.
+Delivering reliable security and enterprise IT solutions with
+advanced technology, fast installation, professional support
+and trusted service for homes, offices and businesses.
 </p>
+
+</div>
 
 <div class="why-container">
 
 <div class="why-box">
-<h3>⚡ Fast Installation</h3>
+<div class="why-icon">⚡</div>
+<h3>Fast Installation</h3>
 <p>
-Quick and professional setup services with minimum downtime for homes and businesses.
+Quick deployment and professional setup with minimum downtime
+for homes, offices and commercial spaces.
 </p>
 </div>
 
 <div class="why-box">
-<h3>🛡 Trusted Security</h3>
+<div class="why-icon">🛡</div>
+<h3>Trusted Security</h3>
 <p>
-Advanced surveillance and protection systems designed for maximum safety and monitoring.
+Advanced surveillance and security systems designed for
+24/7 protection, monitoring and complete reliability.
 </p>
 </div>
 
 <div class="why-box">
-<h3>📞 24/7 Support</h3>
+<div class="why-icon">📞</div>
+<h3>24/7 Technical Support</h3>
 <p>
-Technical assistance and maintenance support whenever you need reliable service.
+Dedicated technical assistance and maintenance support
+whenever you need fast and reliable service.
 </p>
 </div>
 
 <div class="why-box">
-<h3>💼 Professional Team</h3>
+<div class="why-icon">💼</div>
+<h3>Professional Team</h3>
 <p>
-Experienced technicians providing high-quality IT and security infrastructure solutions.
+Experienced technicians delivering enterprise-grade
+security and networking infrastructure solutions.
 </p>
 </div>
 
 </div>
 
 </section>
-
-<!-- STATS -->
-
-<section class="stats">
-
-<div class="stats-grid">
-
-<div class="stat-box">
-<h2>50+</h2>
-<p>Projects Completed</p>
-</div>
-
-<div class="stat-box">
-<h2>24/7</h2>
-<p>Technical Support</p>
-</div>
-
-<div class="stat-box">
-<h2>100%</h2>
-<p>Client Satisfaction</p>
-</div>
-
-<div class="stat-box">
-<h2>5+</h2>
-<p>Years Experience</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-<div class="contact-box">
-
-<h2>Contact Shiva Infotech</h2>
-
-<p>📞 Yash Modi : +91 91048 87110</p>
-
-<p>📞 Mahil Desai : +91 75758 16363</p>
-
-<p>📧 shivainfotech88@gmail.com</p>
-
-<p>
-📸 Instagram :
-<a href="https://instagram.com/_shivainfotech_"
-target="_blank"
-style="color:#00c6ff;text-decoration:none;font-weight:600;">
-@_shivainfotech_
-</a>
-</p>
-
-<p>📍 Surat, Gujarat, India</p>
-
-<br>
-
-<a href="https://wa.me/919104887110"
-class="btn btn-primary"
-target="_blank">
-Chat on WhatsApp
-</a>
-
-</div>
-
-</section>
-
-<!-- WHATSAPP -->
-
-<a class="whatsapp"
-href="https://wa.me/919104887110"
-target="_blank">
-💬
-</a>
-
-<footer>
-© 2026 Shiva Infotech | All Rights Reserved
-</footer>
-
-<script>
-
-const cards = document.querySelectorAll('.service-card');
-
-cards.forEach(card => {
-
-card.addEventListener('mousemove',(e)=>{
-
-const rect = card.getBoundingClientRect();
-
-const x = e.clientX - rect.left;
-const y = e.clientY - rect.top;
-
-const rotateY = ((x / rect.width) - 0.5) * 10;
-const rotateX = ((y / rect.height) - 0.5) * -10;
-
-card.style.transform =
-`rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
-
-});
-
-card.addEventListener('mouseleave',()=>{
-
-card.style.transform =
-'rotateX(0deg) rotateY(0deg)';
-
-});
-
-});
-
-</script>
 
 </body>
 </html>
