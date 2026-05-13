@@ -28,7 +28,6 @@ overflow-x:hidden;
 }
 
 /* FIX SCROLL */
-
 section{
 scroll-margin-top:100px;
 }
@@ -153,7 +152,7 @@ text-align:center;
 padding:130px 20px 80px;
 
 background:
-linear-gradient(rgba(3,10,20,0.78), rgba(3,10,20,0.90)),
+linear-gradient(rgba(3,10,20,0.78), rgba(3,10,20,0.88)),
 url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1920&q=80');
 
 background-size:cover;
@@ -163,7 +162,7 @@ overflow:hidden;
 }
 
 .hero-content{
-max-width:1000px;
+max-width:950px;
 animation:fadeUp 1.2s ease;
 z-index:2;
 }
@@ -185,7 +184,7 @@ font-size:20px;
 line-height:1.9;
 color:#d6dfea;
 margin-bottom:40px;
-max-width:850px;
+max-width:800px;
 margin-left:auto;
 margin-right:auto;
 }
@@ -202,7 +201,6 @@ border-radius:22px;
 box-shadow:0 15px 40px rgba(0,0,0,0.35);
 animation:float 4s ease-in-out infinite;
 font-size:15px;
-font-weight:500;
 }
 
 .card1{
@@ -337,126 +335,6 @@ margin-bottom:15px;
 font-size:15px;
 line-height:1.8;
 color:#d6dfea;
-}
-
-/* WHY CHOOSE US */
-
-.why-us{
-padding:120px 20px;
-position:relative;
-overflow:hidden;
-}
-
-.why-us::before{
-content:'';
-position:absolute;
-width:500px;
-height:500px;
-background:radial-gradient(circle,#00c6ff18,transparent 70%);
-top:-180px;
-left:-180px;
-z-index:-1;
-}
-
-.why-heading{
-text-align:center;
-max-width:900px;
-margin:auto auto 70px;
-}
-
-.mini-tag{
-display:inline-block;
-padding:10px 22px;
-border-radius:50px;
-background:rgba(0,198,255,0.12);
-border:1px solid rgba(0,198,255,0.25);
-color:#00c6ff;
-font-size:14px;
-font-weight:600;
-letter-spacing:1px;
-margin-bottom:22px;
-}
-
-.why-us .section-title{
-font-size:56px;
-margin-bottom:22px;
-line-height:1.2;
-}
-
-.why-us .section-title span{
-background:linear-gradient(45deg,#00c6ff,#4facfe,#0072ff);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
-.why-us .section-subtitle{
-max-width:760px;
-margin:auto;
-font-size:18px;
-line-height:2;
-color:#c6d3e1;
-}
-
-.why-container{
-max-width:1250px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-}
-
-.why-box{
-background:rgba(255,255,255,0.05);
-padding:40px 30px;
-border-radius:28px;
-border:1px solid rgba(255,255,255,0.08);
-transition:0.45s;
-text-align:left;
-position:relative;
-overflow:hidden;
-backdrop-filter:blur(18px);
-box-shadow:0 15px 40px rgba(0,0,0,0.25);
-}
-
-.why-box::before{
-content:'';
-position:absolute;
-width:180px;
-height:180px;
-background:linear-gradient(45deg,#00c6ff15,transparent);
-border-radius:50%;
-top:-70px;
-right:-70px;
-}
-
-.why-box:hover{
-transform:translateY(-12px);
-border-color:#00c6ff55;
-box-shadow:0 25px 55px rgba(0,0,0,0.4);
-}
-
-.why-icon{
-width:70px;
-height:70px;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:30px;
-border-radius:18px;
-background:linear-gradient(45deg,#00c6ff,#0072ff);
-margin-bottom:22px;
-box-shadow:0 10px 30px rgba(0,114,255,0.35);
-}
-
-.why-box h3{
-font-size:24px;
-margin-bottom:15px;
-}
-
-.why-box p{
-color:#d6dfea;
-line-height:1.9;
-font-size:15px;
 }
 
 /* STATS */
@@ -628,19 +506,6 @@ font-size:34px;
 font-size:15px;
 }
 
-.why-us .section-title{
-font-size:38px;
-}
-
-.why-box{
-padding:30px 24px;
-text-align:center;
-}
-
-.why-icon{
-margin:auto auto 20px;
-}
-
 .contact-box{
 padding:45px 20px;
 }
@@ -651,7 +516,6 @@ font-size:32px;
 
 .contact p{
 font-size:16px;
-word-break:break-word;
 }
 
 .floating-card{
@@ -696,7 +560,7 @@ max-width:280px;
 </div>
 
 <div class="floating-card card2">
-🌐 Enterprise Networking
+🌐 Advanced Networking
 </div>
 
 <div class="hero-content">
@@ -706,10 +570,9 @@ Future Ready <span>Security & IT</span> Solutions
 </h1>
 
 <p>
-Advanced Security Surveillance, Enterprise Networking, Fire Safety,
-Biometric Access Control, Server Management and Smart IT Infrastructure
-Solutions Designed to Deliver Maximum Safety, Connectivity and Reliability
-for Modern Homes, Offices, Schools & Commercial Businesses.
+Professional CCTV Installation, Networking, Fire Safety,
+Biometric Attendance Systems, Server Setup and Advanced
+IT Infrastructure Solutions for Homes, Offices & Businesses.
 </p>
 
 <div class="hero-buttons">
@@ -738,8 +601,7 @@ Our <span>Premium Services</span>
 
 <p class="section-subtitle">
 We provide complete surveillance, networking and enterprise
-security solutions with modern technology, reliable support
-and professional installation services.
+security solutions with modern technology and professional support.
 </p>
 
 <div class="grid">
@@ -802,69 +664,107 @@ and enterprise IT infrastructure management.
 
 </section>
 
-<!-- WHY CHOOSE US -->
+<!-- STATS -->
 
-<section class="why-us">
+<section class="stats">
 
-<div class="why-heading">
+<div class="stats-grid">
 
-<span class="mini-tag">
-WHY CHOOSE US
-</span>
-
-<h2 class="section-title">
-Why Choose <span>Shiva Infotech</span>
-</h2>
-
-<p class="section-subtitle">
-Delivering reliable security and enterprise IT solutions with
-advanced technology, fast installation, professional support
-and trusted service for homes, offices and businesses.
-</p>
-
+<div class="stat-box">
+<h2>500+</h2>
+<p>Projects Completed</p>
 </div>
 
-<div class="why-container">
-
-<div class="why-box">
-<div class="why-icon">⚡</div>
-<h3>Fast Installation</h3>
-<p>
-Quick deployment and professional setup with minimum downtime
-for homes, offices and commercial spaces.
-</p>
+<div class="stat-box">
+<h2>24/7</h2>
+<p>Technical Support</p>
 </div>
 
-<div class="why-box">
-<div class="why-icon">🛡</div>
-<h3>Trusted Security</h3>
-<p>
-Advanced surveillance and security systems designed for
-24/7 protection, monitoring and complete reliability.
-</p>
+<div class="stat-box">
+<h2>100%</h2>
+<p>Client Satisfaction</p>
 </div>
 
-<div class="why-box">
-<div class="why-icon">📞</div>
-<h3>24/7 Technical Support</h3>
-<p>
-Dedicated technical assistance and maintenance support
-whenever you need fast and reliable service.
-</p>
-</div>
-
-<div class="why-box">
-<div class="why-icon">💼</div>
-<h3>Professional Team</h3>
-<p>
-Experienced technicians delivering enterprise-grade
-security and networking infrastructure solutions.
-</p>
+<div class="stat-box">
+<h2>10+</h2>
+<p>Years Experience</p>
 </div>
 
 </div>
 
 </section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="contact-box">
+
+<h2>Contact Shiva Infotech</h2>
+
+<p>📞 Yash Modi : +91 91048 87110</p>
+
+<p>📞 Mahil Desai : +91 75758 16363</p>
+
+<p>📧 shivainfotech88@gmail.com</p>
+
+<p>📍 Surat, Gujarat, India</p>
+
+<br>
+
+<a href="https://wa.me/919104887110"
+class="btn btn-primary"
+target="_blank">
+Chat on WhatsApp
+</a>
+
+</div>
+
+</section>
+
+<!-- WHATSAPP -->
+
+<a class="whatsapp"
+href="https://wa.me/919104887110"
+target="_blank">
+💬
+</a>
+
+<footer>
+© 2026 Shiva Infotech | All Rights Reserved
+</footer>
+
+<script>
+
+const cards = document.querySelectorAll('.service-card');
+
+cards.forEach(card => {
+
+card.addEventListener('mousemove',(e)=>{
+
+const rect = card.getBoundingClientRect();
+
+const x = e.clientX - rect.left;
+const y = e.clientY - rect.top;
+
+const rotateY = ((x / rect.width) - 0.5) * 10;
+const rotateX = ((y / rect.height) - 0.5) * -10;
+
+card.style.transform =
+`rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-10px)`;
+
+});
+
+card.addEventListener('mouseleave',()=>{
+
+card.style.transform =
+'rotateX(0deg) rotateY(0deg)';
+
+});
+
+});
+
+</script>
 
 </body>
 </html>
