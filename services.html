@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Services | Shiva Infotech</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#06111f;
+color:white;
+overflow-x:hidden;
+}
+
+/* Background Glow */
+
+body::before{
+content:'';
+position:fixed;
+width:650px;
+height:650px;
+background:radial-gradient(circle,#00c6ff33,transparent 70%);
+top:-250px;
+left:-180px;
+z-index:-1;
+}
+
+body::after{
+content:'';
+position:fixed;
+width:550px;
+height:550px;
+background:radial-gradient(circle,#0072ff22,transparent 70%);
+bottom:-180px;
+right:-150px;
+z-index:-1;
+}
+
+/* Header */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:16px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(5,15,30,0.75);
+backdrop-filter:blur(14px);
+border-bottom:1px solid rgba(255,255,255,0.08);
+z-index:1000;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo img{
+width:48px;
+height:48px;
+border-radius:50%;
+background:white;
+}
+
+.logo span{
+font-size:26px;
+font-weight:700;
+background:linear-gradient(45deg,#00c6ff,#0072ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:35px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#00c6ff;
+}
+
+/* Hero */
+
+.hero{
+padding:180px 20px 100px;
+text-align:center;
+background:
+linear-gradient(rgba(2,10,20,.85),rgba(2,10,20,.92)),
+url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1920&q=80');
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:64px;
+font-weight:800;
+margin-bottom:20px;
+}
+
+.hero h1 span{
+color:#00c6ff;
+}
+
+.hero p{
+max-width:850px;
+margin:auto;
+font-size:18px;
+color:#d6dfea;
+line-height:1.9;
+}
+
+/* Services */
+
+.services{
+padding:100px 20px;
+text-align:center;
+}
+
+.section-title{
+font-size:48px;
+margin-bottom:15px;
+}
+
+.section-title span{
+color:#00c6ff;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+max-width:1250px;
+margin:auto;
+}
+
+.service-card{
+background:rgba(255,255,255,0.06);
+padding:35px 28px;
+border-radius:28px;
+border:1px solid rgba(255,255,255,0.08);
+backdrop-filter:blur(18px);
+transition:.4s;
+}
+
+.service-card:hover{
+transform:translateY(-10px);
+box-shadow:0 25px 50px rgba(0,0,0,.35);
+}
+
+.icon{
+font-size:50px;
+margin-bottom:18px;
+}
+
+.service-card h3{
+margin-bottom:12px;
+}
+
+.service-card p{
+color:#c9d5e3;
+line-height:1.7;
+}
+
+/* Contact */
+
+.contact{
+padding:100px 20px;
+text-align:center;
+}
+
+.contact-box{
+max-width:900px;
+margin:auto;
+background:rgba(255,255,255,0.06);
+padding:60px 35px;
+border-radius:30px;
+border:1px solid rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+}
+
+.contact-box h2{
+margin-bottom:25px;
+font-size:40px;
+}
+
+.contact p{
+margin:14px 0;
+color:#d6dfea;
+}
+
+.btn{
+display:inline-block;
+padding:15px 34px;
+border-radius:50px;
+background:linear-gradient(45deg,#00c6ff,#0072ff);
+color:white;
+text-decoration:none;
+font-weight:600;
+margin-top:20px;
+}
+
+/* WhatsApp */
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+width:65px;
+height:65px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+text-decoration:none;
+color:white;
+z-index:9999;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(37,211,102,.7);}
+70%{box-shadow:0 0 0 20px rgba(37,211,102,0);}
+100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
+}
+
+footer{
+background:#020912;
+padding:28px;
+text-align:center;
+color:#8fa4bb;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+padding:15px 20px;
+gap:15px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+gap:18px;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+<img src="shiva-logo.png" alt="Logo">
+<span>SHIVA INFOTECH</span>
+</div>
+
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="index.html#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Our <span>Services</span></h1>
+<p>
+Professional CCTV, Security and IT Infrastructure Solutions for Homes, Offices, Schools and Businesses.
+</p>
+</section>
+
+<section class="services">
+
+<h2 class="section-title">
+Premium <span>Solutions</span>
+</h2>
+
+<div class="grid">
+
+<div class="service-card">
+<div class="icon">📷</div>
+<h3>CCTV Installation</h3>
+<p>HD & IP CCTV installation with professional setup.</p>
+</div>
+
+<div class="service-card">
+<div class="icon">🛠</div>
+<h3>CCTV Maintenance</h3>
+<p>Repair and maintenance for all surveillance systems.</p>
+</div>
+
+<div class="service-card">
+<div class="icon">📡</div>
+<h3>Remote Monitoring</h3>
+<p>Mobile and remote camera access solutions.</p>
+</div>
+
+<div class="service-card">
+<div class="icon">🌐</div>
+<h3>Networking Solutions</h3>
+<p>LAN, routing and business networking setup.</p>
+</div>
+
+<div class="service-card">
+<div class="icon">📶</div>
+<h3>Wi-Fi Setup</h3>
+<p>Reliable Wi-Fi and internet infrastructure.</p>
+</div>
+
+<div class="service-card">
+<div class="icon">🛡</div>
+<h3>Access Control</h3>
+<p>Biometric and door access security systems.</p>
+</div>
+
+<div class="service-card">
+<div class="icon">🔥</div>
+<h3>Fire Alarm Systems</h3>
+<p>Fire safety and alarm installation services.</p>
+</div>
+
+<div class="service-card">
+<div class="icon">🚪</div>
+<h3>Video Door Phone</h3>
+<p>Smart door communication & monitoring.</p>
+</div>
+
+<div class="service-card">
+<div class="icon">☎</div>
+<h3>Intercom / EPABX</h3>
+<p>Office communication and calling systems.</p>
+</div>
+
+<div class="service-card">
+<div class="icon">🖥</div>
+<h3>IT Support</h3>
+<p>Computer troubleshooting and technical support.</p>
+</div>
+
+<div class="service-card">
+<div class="icon">🏢</div>
+<h3>Smart Office Setup</h3>
+<p>Modern office infrastructure and automation.</p>
+</div>
+
+<div class="service-card">
+<div class="icon">🔒</div>
+<h3>Security Monitoring</h3>
+<p>Advanced surveillance and monitoring systems.</p>
+</div>
+
+</div>
+</section>
+
+<section class="contact" id="contact">
+
+<div class="contact-box">
+
+<h2>Contact Shiva Infotech</h2>
+
+<p>📞 Yash Modi : +91 91048 87110</p>
+<p>📞 Mahil Desai : +91 75758 16363</p>
+<p>📧 shivainfotech88@gmail.com</p>
+<p>📍 Surat, Gujarat, India</p>
+
+<a href="https://wa.me/919104887110"
+class="btn"
+target="_blank">
+Chat on WhatsApp
+</a>
+
+</div>
+</section>
+
+<a href="https://wa.me/919104887110"
+class="whatsapp"
+target="_blank">
+💬
+</a>
+
+<footer>
+© 2026 Shiva Infotech | All Rights Reserved
+</footer>
+
+</body>
+</html>
