@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shiva Infotech | CCTV & IT Solutions</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#06111f;
+  color:white;
+  overflow-x:hidden;
+  line-height:1.6;
+}
+
+/* Glow Background */
+body::before{
+  content:'';
+  position:fixed;
+  width:650px;
+  height:650px;
+  background:radial-gradient(circle,#00c6ff33,transparent 70%);
+  top:-250px;
+  left:-180px;
+  z-index:-1;
+  animation:moveGlow 8s linear infinite alternate;
+}
+
+body::after{
+  content:'';
+  position:fixed;
+  width:550px;
+  height:550px;
+  background:radial-gradient(circle,#0072ff22,transparent 70%);
+  bottom:-180px;
+  right:-150px;
+  z-index:-1;
+  animation:moveGlow2 10s linear infinite alternate;
+}
+
+@keyframes moveGlow{
+  0%{transform:translate(0,0);}
+  100%{transform:translate(120px,90px);}
+}
+
+@keyframes moveGlow2{
+  0%{transform:translate(0,0);}
+  100%{transform:translate(-100px,-70px);}
+}
+
+/* Header */
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  padding:16px 60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(5,15,30,.75);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  z-index:1000;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo img{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  background:white;
+}
+
+.logo span{
+  font-size:26px;
+  font-weight:700;
+  background:linear-gradient(45deg,#00c6ff,#0072ff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:35px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:white;
+  font-weight:500;
+  position:relative;
+  transition:.3s;
+}
+
+nav ul li a:hover{
+  color:#00c6ff;
+}
+
+nav ul li a::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:-5px;
+  width:0;
+  height:2px;
+  background:#00c6ff;
+  transition:.3s;
+}
+
+nav ul li a:hover::after{
+  width:100%;
+}
+
+/* Hero */
+.hero{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:160px 20px 100px;
+  background:
+    linear-gradient(rgba(2,10,20,.82),rgba(2,10,20,.92)),
+    url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1920&q=80');
+  background-size:cover;
+  background-position:center;
+}
+
+.hero-content{
+  max-width:1000px;
+  animation:fadeUp 1s ease;
+}
+
+.hero-badge{
+  display:inline-block;
+  padding:12px 22px;
+  border-radius:50px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.08);
+  margin-bottom:30px;
+}
+
+.hero h1{
+  font-size:72px;
+  line-height:1.1;
+  font-weight:800;
+  margin-bottom:25px;
+}
+
+.hero h1 span{
+  background:linear-gradient(45deg,#00c6ff,#4facfe,#0072ff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+  font-size:19px;
+  color:#d4ddeb;
+  margin-bottom:40px;
+}
+
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  padding:15px 36px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:600;
+  transition:.35s;
+  display:inline-block;
+}
+
+.btn:hover{
+  transform:translateY(-4px);
+}
+
+.btn-primary{
+  background:linear-gradient(45deg,#00c6ff,#0072ff);
+  color:white;
+  box-shadow:0 12px 30px rgba(0,114,255,.35);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:55px;
+  padding:16px 34px;
+  line-height:1;
+  font-size:16px;
+  font-weight:600;
+  white-space:nowrap;
+}
+
+.btn-secondary{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.08);
+  color:white;
+}
+
+/* Sections */
+.services, .projects, .testimonials, .contact{
+  padding:100px 20px;
+  text-align:center;
+}
+
+.section-title{
+  font-size:48px;
+  margin-bottom:15px;
+}
+
+.section-title span{
+  color:#00c6ff;
+}
+
+.section-subtitle{
+  max-width:750px;
+  margin:auto;
+  color:#b9c4d5;
+  margin-bottom:60px;
+}
+
+/* Grid */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* Cards */
+.service-card, .project-card, .testimonial-card, .stat-box{
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:26px;
+  backdrop-filter:blur(15px);
+  transition:.4s;
+}
+
+.service-card, .testimonial-card{
+  padding:35px 28px;
+}
+
+.project-card{
+  padding:18px;
+}
+
+.service-card:hover,
+.project-card:hover,
+.testimonial-card:hover,
+.stat-box:hover{
+  transform:translateY(-10px);
+  box-shadow:0 25px 50px rgba(0,0,0,.35);
+}
+
+.icon{
+  font-size:50px;
+  margin-bottom:18px;
+}
+
+.project-card img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+  border-radius:18px;
+  margin-bottom:15px;
+}
+
+/* Stats */
+.stats{
+  padding:90px 20px;
+  background:linear-gradient(135deg,#07172a,#0d2745);
+}
+
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.stat-box{
+  padding:35px;
+}
+
+.stat-box h2{
+  font-size:42px;
+  color:#00c6ff;
+  margin-bottom:10px;
+}
+
+/* Contact */
+.contact-box{
+  max-width:850px;
+  margin:auto;
+  padding:60px 35px;
+  background:rgba(255,255,255,.05);
+  border-radius:30px;
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.contact p{
+  margin:12px 0;
+  color:#d5ddea;
+}
+
+.contact a:not(.btn){
+color:#00c6ff;
+text-decoration:none;
+}
+
+/* WhatsApp */
+.whatsapp{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  width:65px;
+  height:65px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:30px;
+  text-decoration:none;
+  z-index:999;
+  animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(37,211,102,.7);}
+  70%{box-shadow:0 0 0 20px rgba(37,211,102,0);}
+  100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
+}
+
+footer{
+  background:#020912;
+  padding:25px;
+  text-align:center;
+  color:#8fa4bb;
+}
+
+@keyframes fadeUp{
+  from{ opacity:0; transform:translateY(40px); }
+  to{ opacity:1; transform:translateY(0); }
+}
+
+/* Mobile */
+@media(max-width:768px){
+  header{
+    flex-direction:column;
+    padding:15px 20px;
+    gap:15px;
+  }
+
+  nav ul{
+    gap:18px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero{
+    padding-top:220px;
+  }
+
+  .hero h1{
+    font-size:42px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .section-title{
+    font-size:34px;
+  }
+
+  .btn{
+    width:100%;
+    max-width:280px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <img src="shiva-logo.png" alt="Logo">
+    <span>SHIVA INFOTECH</span>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-badge">
+      🚀 Advanced CCTV & IT Infrastructure Solutions
+    </div>
+
+    <h1>
+      Future Ready <span>Security & IT</span> Solutions
+    </h1>
+
+    <p>
+      Advanced Security Surveillance, Networking, Fire Safety and Smart IT Solutions for Homes, Offices, Schools & Commercial Businesses.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#contact" class="btn btn-primary">Contact Now</a>
+      <a href="services.html" class="btn btn-secondary">Explore Services</a>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <h2 class="section-title">Our <span>Services</span></h2>
+  <p class="section-subtitle">
+    Professional CCTV, networking and enterprise security solutions with expert support.
+  </p>
+
+  <div class="grid">
+    <div class="service-card">
+      <div class="icon">📷</div>
+      <h3>CCTV Installation</h3>
+      <p>HD & IP Camera installation with remote monitoring support.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">🌐</div>
+      <h3>Networking Solutions</h3>
+      <p>Office networking, WiFi setup and LAN infrastructure solutions.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="icon">🛡</div>
+      <h3>Security Systems</h3>
+      <p>Biometric, access control and enterprise security management.</p>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stats-grid">
+    <div class="stat-box">
+      <h2>50+</h2>
+      <p>Projects Completed</p>
+    </div>
+
+    <div class="stat-box">
+      <h2>24/7</h2>
+      <p>Technical Support</p>
+    </div>
+
+    <div class="stat-box">
+      <h2>100%</h2>
+      <p>Client Satisfaction</p>
+    </div>
+
+    <div class="stat-box">
+      <h2>5+</h2>
+      <p>Years Experience</p>
+    </div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <h2 class="section-title">Recent <span>Projects</span></h2>
+  <p class="section-subtitle">
+    Some of our latest installation and surveillance projects.
+  </p>
+
+  <div class="grid">
+    <div class="project-card">
+      <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=900&q=80">
+      <h3>Office CCTV Setup</h3>
+    </div>
+
+    <div class="project-card">
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80">
+      <h3>Enterprise Networking</h3>
+    </div>
+
+    <div class="project-card">
+      <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=900&q=80">
+      <h3>Security Monitoring</h3>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <h2 class="section-title">Client <span>Reviews</span></h2>
+
+  <div class="grid">
+    <div class="testimonial-card">
+      <h3>Excellent Service</h3>
+      <p>Professional installation and fast support.</p>
+    </div>
+
+    <div class="testimonial-card">
+      <h3>Best CCTV Team</h3>
+      <p>Quality cameras and networking setup done perfectly.</p>
+    </div>
+
+    <div class="testimonial-card">
+      <h3>Reliable Support</h3>
+      <p>Affordable pricing with responsive support.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-box">
+    <h2>Contact Shiva Infotech</h2>
+
+    
+    <p>📞 Yash Modi : <a href="tel:+919104887110">+91 91048 87110</a></p>
+    <p>📞 Mahil Desai : <a href="tel:+917575816363">+91 75758 16363</a></p>
+    <p>📧 <a href="mailto:shivainfotech88@gmail.com">shivainfotech88@gmail.com</a></p>
+
+    <p>
+      📸 Instagram :
+      <a href="https://instagram.com/_shivainfotech_" target="_blank">
+        @_shivainfotech_
+      </a>
+    </p>
+
+    <p>📍 Surat, Gujarat, India</p>
+
+    <br>
+
+    <a href="https://wa.me/919104887110" class="btn btn-primary" target="_blank">
+      Chat on WhatsApp
+    </a>
+  </div>
+</section>
+
+<a class="whatsapp" href="https://wa.me/919104887110" target="_blank">
+  💬
+</a>
+
+<footer>
+  © 2026 Shiva Infotech | All Rights Reserved
+</footer>
+
+</body>
+</html>
